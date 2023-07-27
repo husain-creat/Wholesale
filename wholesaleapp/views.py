@@ -50,3 +50,47 @@ def logout(request):
         request.session['logged']= False
         request.session.flush()
     return redirect ('/')
+
+def companyform(request):
+    return render (request,'companyform.html')
+
+def createcompany(request):
+    if request.method =='POST':
+            name = request.POST['name'] 
+            adress = request.POST['adress'] 
+            telephone_number = request.POST['phonenum'] 
+            email = request.POST['email']
+            password = request.POST['password']
+               
+            User.objects.create(
+                name = name,
+                adress = adress,
+                telephone_number = telephone_number ,
+                email = email,
+                password = password
+            )
+    return redirect('/signup') 
+    
+    
+
+            
+      
+        
+
+
+def salesrepform(request):
+    if request.method =='POST':
+            name = request.POST['repname'] 
+            
+            phone_no = request.POST['phone_number'] 
+            email = request.POST['email']
+            city = request.POST['city']
+               
+            Representative.objects.create(
+                name = name,
+                phone_no = phone_no,
+                email = email,
+                city = city,
+                
+            )
+    return redirect('/salesrep')
