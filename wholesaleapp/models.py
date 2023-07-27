@@ -2,6 +2,7 @@ from django.db import models
 import re
 import bcrypt
 
+<<<<<<< HEAD
 # Create your models here.
 class UserManager(models.Manager):
     def reg_validator(self, postData):
@@ -57,3 +58,9 @@ class Representative(models.Model):
     company = models.ForeignKey(User,on_delete=models.CASCADE, related_name="reps")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+=======
+
+
+  
+    
+>>>>>>> cc86eb8f8506f1b8c69c0595099c085d53ddb18c

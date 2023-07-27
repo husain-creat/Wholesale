@@ -1,0 +1,25 @@
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.mycont{
+    width: 800px;
+    margin: 0 auto;
+}
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.mybutton{
+    width: 100px;
+    margin: 0 auto;
+}
+    
+    
+    
+    
+    
+    
